@@ -1,8 +1,12 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+
 import feedbackRoutes from "./routes/feedback.js";
 import hero_parallax_imagesRoutes from "./routes/hero_parallax_images.js";
+import sessionsRoutes from "./routes/sessions.js";
+import matchesRoutes from "./routes/matches.js";
+import playersRoutes from "./routes/players.js";
 
 dotenv.config();
 const app = express();
@@ -13,6 +17,9 @@ app.use(express.json());
 // Routes
 app.use("/feedback", feedbackRoutes);
 app.use("/hero_parallax_images", hero_parallax_imagesRoutes);
+app.use("/sessions", sessionsRoutes);
+app.use("/matches", matchesRoutes);
+app.use("/players", playersRoutes);
 
 app.get("/", (req, res) => {
   res.json({ message: "Hello from Express + Supabase backend!" });
