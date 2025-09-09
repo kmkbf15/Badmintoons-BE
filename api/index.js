@@ -4,6 +4,9 @@ import express from "express";
 // Import your existing routes
 import feedbackRoutes from "../routes/feedback.js";
 import heroParallaxRoutes from "../routes/hero_parallax_images.js";
+import sessionsRoutes from "../routes/sessions.js";
+import matchesRoutes from "../routes/matches.js";
+import playersRoutes from "../routes/players.js";
 
 const app = express();
 
@@ -22,6 +25,9 @@ app.use((req, res, next) => {
 // Use your existing routes
 app.use("/api/feedback", feedbackRoutes);
 app.use("/api/hero-parallax", heroParallaxRoutes);
+app.use("/api/sessions", sessionsRoutes);
+app.use("/api/matches", matchesRoutes);
+app.use("/api/players", playersRoutes);
 
 // Health check endpoint
 app.get("/api", (req, res) => {
