@@ -13,8 +13,8 @@ const app = express();
 
 // CORS configuration
 const allowedOrigins = [
-  "http://localhost:3000", // your frontend dev
-  "https://your-frontend-domain.com", // your deployed frontend
+  "http://localhost:3001",
+  "https://badmintoons.pages.dev/",
 ];
 
 app.use(
