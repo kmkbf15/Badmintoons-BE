@@ -15,6 +15,7 @@ const app = express();
 const allowedOrigins = [
   "http://localhost:3001",
   "https://badmintoons.pages.dev/",
+  "https://badmintoons-admin.pages.dev/",
 ];
 
 app.use(
